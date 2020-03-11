@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <parent>
+        <groupId>com.snackpub</groupId>
+        <artifactId>SnackPubTools</artifactId>
+        <version>1.0.0</version>
+    </parent>
+
+    <artifactId>core-swagger</artifactId>
+    <version>${snackpub.tool.version}</version>
+    <name>${project.artifactId}</name>
+    <packaging>jar</packaging>
+    <description>swagger 模块</description>
+
+    <dependencies>
+        <!-- Risesin -->
+        <dependency>
+            <groupId>com.snackpub</groupId>
+            <artifactId>core-tools</artifactId>
+            <version>${snackpub.tool.version}</version>
+        </dependency>
+        <!--Swagger-->
+        <dependency>
+            <groupId>com.github.xiaoymin</groupId>
+            <artifactId>knife4j-micro-spring-boot-starter</artifactId>
+            <version>${knife4j.version}</version>
+        </dependency>
+    </dependencies>
+
+    <build>
+        <plugins>
+            <!-- 编译插件 -->
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <configuration>
+                    <source>1.8</source>
+                    <target>1.8</target>
+                    <encoding>${project.build.sourceEncoding}</encoding>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
+
+</project>
