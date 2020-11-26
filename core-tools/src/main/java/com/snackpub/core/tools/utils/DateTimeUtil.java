@@ -18,6 +18,13 @@ public class DateTimeUtil {
 
     public DateTimeUtil() {
     }
+    
+    /**
+     * 获取当前dateTime
+     */
+    public static String dateTimeNow() {
+        return DATETIME_FORMAT.format(LocalDateTime.now(ZoneOffset.of("+8")));
+    }
 
     public static String formatDateTime(TemporalAccessor temporal) {
         return DATETIME_FORMAT.format(temporal);
